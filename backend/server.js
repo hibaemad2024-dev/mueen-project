@@ -28,10 +28,11 @@ const upload = multer({
 app.use("/uploads", express.static("uploads"));
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "helpnetai",
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT,
   charset: "utf8mb4_unicode_ci"
 });
 
