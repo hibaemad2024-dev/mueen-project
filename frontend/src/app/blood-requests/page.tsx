@@ -24,7 +24,7 @@ export default function BloodRequestsPage() {
 if (savedLanguage) {
   setLanguage(savedLanguage);
 }
-    fetch("http://localhost:5000/blood-requests")
+    fetch("https://mueen-project-production.up.railway.app/request")
   .then((res) => res.json())
   .then((data) => {
     setRequests(data);
@@ -224,7 +224,7 @@ const getVolunteerLocation = () => {
       try {
 
         const response = await fetch(
-          `http://localhost:5000/request-complete/${item.id}`,
+          `https://mueen-project-production.up.railway.app/request-complete/${item.id}`,
           {
             method: "PUT",
           }
@@ -270,7 +270,7 @@ const getVolunteerLocation = () => {
       try {
 
         const response = await fetch(
-          `http://localhost:5000/request/${item.id}`,
+          `https://mueen-project-production.up.railway.app/request/${item.id}`,
           {
             method: "PUT",
             headers: {

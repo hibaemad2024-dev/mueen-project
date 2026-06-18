@@ -45,7 +45,8 @@ if (savedLanguage) {
   return (distance * 111).toFixed(1);
 };
   useEffect(() => {
-    fetch("http://localhost:5000/requests")
+    fetch("https://mueen-project-production.up.railway.app/request"
+)
       .then((res) => res.json())
       .then((data) => {
 
@@ -304,7 +305,7 @@ const getVolunteerLocation = () => {
 )}
               {item.image && (
   <img
-    src={`http://localhost:5000/uploads/${item.image}`}
+   src={`https://mueen-project-production.up.railway.app/uploads/${item.image}`}
     alt="صورة الحالة"
     className="w-full max-w-sm rounded-lg mt-3"
   />
@@ -359,7 +360,7 @@ const getVolunteerLocation = () => {
         try {
 
           const response = await fetch(
-            `http://localhost:5000/request-complete/${item.id}`,
+            `https://mueen-project-production.up.railway.app/request-complete/${item.id}`,
             {
               method: "PUT",
             }
@@ -415,7 +416,7 @@ const volunteerPhone =
   localStorage.getItem("volunteerPhone");
 
 const response = await fetch(
-  `http://localhost:5000/request/${item.id}`,
+  `https://mueen-project-production.up.railway.app/request/${item.id}`,
   {
     method: "PUT",
     headers: {

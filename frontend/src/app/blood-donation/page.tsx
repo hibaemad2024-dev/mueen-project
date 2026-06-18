@@ -160,7 +160,7 @@ if (savedLanguage) {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/blood-donor",
+        "https://mueen-project-production.up.railway.app/blood-donor",
         {
           method: "POST",
           headers: {

@@ -7,7 +7,7 @@ export default function RequestsPage() {
   const [acceptedRequests, setAcceptedRequests] = useState<number[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/requests")
+    fetch("https://mueen-project-production.up.railway.app/request")
       .then((res) => res.json())
       .then((data) => setRequests(data));
   }, []);

@@ -113,7 +113,8 @@ const handleSubmit = async () => {
 console.log("bloodType =", bloodType);
 console.log("financialType =", financialType);
     const response = await fetch(
-      "http://localhost:5000/request",
+     "https://mueen-project-production.up.railway.app/request"
+,
       {
         method: "POST",
         body: formData,

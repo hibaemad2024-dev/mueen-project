@@ -22,7 +22,7 @@ useEffect(() => {
   }
 }, []);
 useEffect(() => {
-  fetch("http://localhost:5000/requests")
+  fetch("https://mueen-project-production.up.railway.app/requests")
     .then((res) => res.json())
     .then((data) => setRequests(data));
 }, []);

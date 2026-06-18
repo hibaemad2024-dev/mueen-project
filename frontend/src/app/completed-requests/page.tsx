@@ -13,7 +13,8 @@ export default function CompletedRequestsPage() {
       setDarkMode(true);
     }
 
-    fetch("http://localhost:5000/requests")
+    fetch("https://mueen-project-production.up.railway.app/request"
+)
       .then((res) => res.json())
       .then((data) => {
         const completed = data.filter(
